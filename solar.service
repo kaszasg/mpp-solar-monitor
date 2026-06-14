@@ -1,0 +1,14 @@
+[Unit]
+Description=Solar Inverter Monitor
+After=network.target
+
+[Service]
+Type=notify
+WorkingDirectory=/opt/bas
+ExecStart=/opt/bas/Solar
+Restart=always
+RestartSec=10
+SyslogIdentifier=solar
+
+[Install]
+WantedBy=multi-user.target
